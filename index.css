@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Michroma&display=swap");
+
+@import url("/scss/header.css");
+
+:root {
+  --clr-pure-soul: hsl(0, 0%, 93%);
+  --clr-dark-soul: hsl(0, 0%, 1%);
+
+  --fs-logo: 1.95rem;
+  --fs-logo-laptop: 1.75rem;
+  --fs-logo-tablet: 1.5rem;
+  --fs-logo-mobile: 1.25rem;
+
+  --fs-medium-large: 1.5rem;
+  --fs-small-large: 1.35rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-pure-soul);
+
+  .page-container {
+    background-color: var(--clr-pure-soul);
+  }
+}
