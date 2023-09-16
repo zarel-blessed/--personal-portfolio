@@ -1,18 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Michroma&display=swap");
 
+@import url("/scss/mouse-trail.css");
 @import url("/scss/header.css");
+@import url("/scss/hero.css");
 
 :root {
   --clr-pure-soul: hsl(0, 0%, 93%);
   --clr-dark-soul: hsl(0, 0%, 1%);
+  --clr-primary: hsl(68, 68%, 47%);
 
   --fs-logo: 1.95rem;
   --fs-logo-laptop: 1.75rem;
   --fs-logo-tablet: 1.5rem;
   --fs-logo-mobile: 1.25rem;
 
+  --fs-gigantic: 6rem;
+  --fs-medium-gigantic: 4rem;
+  --fs-small-gigantic: 3rem;
+  --fs-x-small-gigantic: 2.65rem;
+  --fs-xx-small-gigantic: 2.35rem;
+  --fa-large: 2rem;
   --fs-medium-large: 1.5rem;
   --fs-small-large: 1.35rem;
+  --fs-x-small-large: 1.25rem;
+  --fs-normal: 1rem;
 }
 
 * {
@@ -31,6 +42,10 @@
 
 body {
   background-color: var(--clr-pure-soul);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .page-container {
     background-color: var(--clr-pure-soul);

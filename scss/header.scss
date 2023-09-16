@@ -20,6 +20,7 @@
   inset: 0 0 auto 0;
   padding: 1.35em 2.35em;
   background-color: hsla(0, 0%, 93%, 0.2);
+  backdrop-filter: blur(5px);
   z-index: 100;
 
   .logo {
@@ -41,9 +42,13 @@
   }
 
   .letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     font-size: var(--fs-logo);
     color: var(--clr-dark-soul);
     font-family: "Michroma", sans-serif;
+    transform: translate(-50%, -50%);
   }
 
   .call-to-actions-container {

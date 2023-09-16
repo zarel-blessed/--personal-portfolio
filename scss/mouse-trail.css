@@ -1,0 +1,30 @@
+.mouse-trail {
+  position: fixed;
+  inset: 100% auto auto;
+  width: 20px;
+  height: 20px;
+  background-color: var(--clr-dark-soul);
+  border-radius: 50%;
+  transition: 0.3s linear;
+  mix-blend-mode: initial;
+  pointer-events: none;
+  animation: fade-in 0.3s linear;
+  z-index: 50;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mouse-trail {
+    display: none;
+  }
+}

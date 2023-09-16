@@ -12,19 +12,25 @@
   </head>
   <body>
     <div class="page-container">
+      <div class="mouse-trail"></div>
+
       <header class="header">
         <h1 class="logo"><a href="/">ShaheerxDEV</a></h1>
+
         <a class="letter" href="/">S</a>
+
         <div class="call-to-actions-container">
           <a href="/">Projects</a>
           <a href="/">Contact ME</a>
         </div>
+
         <div class="hotdog-icon">
           <span></span>
           <span></span>
           <span></span>
           <span class="extra-span"></span>
         </div>
+
         <div class="mobile-menu">
           <ul>
             <li><a href="/">Home</a></li>
@@ -40,8 +46,30 @@
           </div>
         </div>
       </header>
-      <main class="main"></main>
+
+      <main class="main">
+        <section class="hero">
+          <small>Designer x Developer</small>
+          <h1 class="slogan">Let’s Grow Your Brand To the best</h1>
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="/assets/recent-project-medium.jpg"
+            />
+            <source
+              media="(max-width: 480px)"
+              srcset="/assets/recent-project-small.jpg"
+            />
+            <img
+              src="/assets/recent-project-large.jpg"
+              alt="Recent Projects"
+              draggable="false"
+            />
+          </picture>
+        </section>
+      </main>
     </div>
+    <script src="/js/mouse-trail.js"></script>
     <script src="/js/header.js"></script>
   </body>
 </html>
