@@ -1,6 +1,8 @@
 const mouseTrail = document.querySelector(".mouse-trail");
-const slogan = document.querySelector(".hero .slogan");
 const header = document.querySelector(".header");
+
+const images = document.querySelectorAll(".trail-image-target");
+const headings = document.querySelectorAll(".trail-heading-target");
 
 window.addEventListener("mousemove", (e) => {
   mouseTrail.style.left = `${e.clientX}px`;
@@ -15,16 +17,30 @@ header.addEventListener("mouseout", () => {
   mouseTrail.style.backgroundColor = `hsl(0, 0%, 1%)`;
 });
 
-slogan.addEventListener("mousemove", () => {
-  mouseTrail.style.backgroundColor = `hsl(0, 0%, 93%)`;
-  mouseTrail.style.scale = `2`;
-  mouseTrail.style.mixBlendMode = "difference";
-});
+headings.forEach((heading) => {
+  heading.addEventListener("mousemove", () => {
+    mouseTrail.style.backgroundColor = `hsl(0, 0%, 93%)`;
+    mouseTrail.style.scale = `2`;
+    mouseTrail.style.mixBlendMode = "difference";
+  });
 
-slogan.addEventListener("mouseout", () => {
-  if (mouseTrail.style.scale === "2") {
+  heading.addEventListener("mouseout", () => {
     mouseTrail.style.scale = `1`;
     mouseTrail.style.mixBlendMode = "initial";
     mouseTrail.style.backgroundColor = `hsl(0, 0%, 1%)`;
-  }
+  });
+});
+
+images.forEach((image) => {
+  image.addEventListener("mousemove", () => {
+    mouseTrail.style.backgroundColor = `transparent`;
+    mouseTrail.style.border = `1px solid white`;
+    mouseTrail.style.scale = `3`;
+  });
+
+  image.addEventListener("mouseout", () => {
+    mouseTrail.style.border = `none`;
+    mouseTrail.style.scale = `1`;
+    mouseTrail.style.backgroundColor = `hsl(0, 0%, 1%)`;
+  });
 });

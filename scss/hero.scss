@@ -119,6 +119,16 @@
     .slogan {
       font-size: var(--fs-small-gigantic);
     }
+
+    figure {
+      .recent-project-data {
+        flex-direction: column;
+
+        .right {
+          margin-top: 1em;
+        }
+      }
+    }
   }
 }
 
@@ -131,13 +141,15 @@
       font-size: var(--fs-x-small-gigantic);
     }
 
-    picture {
-      img {
-        aspect-ratio: 16 / 9;
-      }
+    figure {
+      picture {
+        img {
+          aspect-ratio: 16 / 9;
+        }
 
-      &::before {
-        font-size: var(--fs-normal);
+        &::before {
+          font-size: var(--fs-normal);
+        }
       }
     }
   }
@@ -152,16 +164,26 @@
       font-size: var(--fs-xx-small-gigantic);
     }
 
-    picture {
-      top: 1em;
+    figure {
+      picture {
+        top: 1em;
 
-      img {
-        aspect-ratio: 1;
+        img {
+          aspect-ratio: 1;
+        }
+
+        &::before {
+          padding: 0.65em 1.35em;
+          border-radius: 1em;
+        }
       }
 
-      &::before {
-        padding: 0.65em 1.35em;
-        border-radius: 1em;
+      .recent-project-data {
+        .right {
+          a {
+            font-size: var(--fs-medium-small);
+          }
+        }
       }
     }
   }
