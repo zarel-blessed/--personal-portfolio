@@ -1,9 +1,18 @@
 const mouseTrail = document.querySelector(".mouse-trail");
 const slogan = document.querySelector(".hero .slogan");
+const header = document.querySelector(".header");
 
 window.addEventListener("mousemove", (e) => {
-  mouseTrail.style.left = `${e.pageX}px`;
-  mouseTrail.style.top = `${e.pageY}px`;
+  mouseTrail.style.left = `${e.clientX}px`;
+  mouseTrail.style.top = `${e.clientY}px`;
+});
+
+header.addEventListener("mousemove", () => {
+  mouseTrail.style.backgroundColor = `transparent`;
+});
+
+header.addEventListener("mouseout", () => {
+  mouseTrail.style.backgroundColor = `hsl(0, 0%, 1%)`;
 });
 
 slogan.addEventListener("mousemove", () => {

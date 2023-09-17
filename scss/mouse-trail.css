@@ -6,6 +6,7 @@
   background-color: var(--clr-dark-soul);
   border-radius: 50%;
   transition: 0.3s linear;
+  translate: -50% -50%;
   mix-blend-mode: initial;
   pointer-events: none;
   animation: fade-in 0.3s linear;

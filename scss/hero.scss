@@ -1,3 +1,14 @@
+@mixin call-to-action {
+  display: inline-block;
+  position: relative;
+  bottom: 0px;
+  padding: 0.5em 1.45em;
+  font-family: "Michroma", sans-serif;
+  border: 1px solid var(--clr-dark-soul);
+  color: var(--clr-dark-soul);
+  border-radius: 0.725em;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -20,29 +31,75 @@
     line-height: 1;
   }
 
-  picture {
-    position: relative;
-    top: 2em;
+  figure {
+    picture {
+      position: relative;
+      top: 2em;
 
-    img {
-      width: 100%;
-      aspect-ratio: 16 / 7;
-      object-fit: cover;
-      border: 2px solid #999;
-      border-radius: 2em;
+      img {
+        width: 100%;
+        aspect-ratio: 16 / 7;
+        object-fit: cover;
+        border: 2px solid #999;
+        border-radius: 2em;
+      }
+
+      &::before {
+        content: "Explore How";
+        position: absolute;
+        left: 50%;
+        padding: 1em 2.5em;
+        background-color: var(--clr-primary);
+        border-radius: 1.35em;
+        font-size: var(--fs-x-small-large);
+        font-weight: 500;
+        translate: -50% -50%;
+        cursor: pointer;
+      }
     }
 
-    &::before {
-      content: "Explore How";
-      position: absolute;
-      left: 50%;
-      padding: 1em 2.5em;
-      background-color: var(--clr-primary);
-      border-radius: 1.35em;
-      font-size: var(--fs-x-small-large);
-      font-weight: 500;
-      translate: -50% -50%;
-      cursor: pointer;
+    .recent-project-data {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 2em;
+      padding-block: 1em;
+
+      .left {
+        figcaption {
+          font-size: var(--fs-x-small-large);
+          text-transform: uppercase;
+          font-weight: 500;
+          color: var(--clr-dark-soul);
+        }
+
+        .tags {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          margin-top: 1em;
+
+          span {
+            @include call-to-action;
+            font-family: "Inter", sans-serif;
+            border-color: #777;
+            color: #777;
+            border-radius: 0.5em;
+          }
+        }
+      }
+
+      .right {
+        a {
+          @include call-to-action;
+          margin-top: 5px;
+          transition: bottom 0.2s linear;
+
+          &:hover {
+            bottom: 5px;
+          }
+        }
+      }
     }
   }
 }
