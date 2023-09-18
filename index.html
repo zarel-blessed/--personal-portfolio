@@ -3,24 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
     <title>ShaheerxDEV - Frontend Developer</title>
+
+    <script defer src="/js/mouse-trail.js"></script>
+    <script defer src="/js/header.js"></script>
   </head>
   <body>
     <div class="page-container">
       <div class="mouse-trail"></div>
 
       <header class="header">
-        <h1 class="logo"><a href="/">ShaheerxDEV</a></h1>
+        <h1 class="logo"><a href="#home">ShaheerxDEV</a></h1>
 
         <a class="letter" href="/">S</a>
 
         <div class="call-to-actions-container">
-          <a href="/">Projects</a>
+          <a href="#projects-section">Projects</a>
           <a href="/">Contact ME</a>
         </div>
 
@@ -33,9 +38,9 @@
 
         <div class="mobile-menu">
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="/">About</a></li>
-            <li><a href="/">Projects</a></li>
+            <li><a href="#projects-section">Projects</a></li>
             <li><a href="/">Contact ME</a></li>
           </ul>
           <div class="socials">
@@ -47,7 +52,7 @@
         </div>
       </header>
 
-      <main class="main">
+      <main id="home" class="main">
         <section class="hero">
           <small>DESIGNER x DEVELOPER</small>
 
@@ -92,16 +97,16 @@
         </section>
 
         <section class="about-section">
-          <small>ZAREL x SHAHEER</small>
-          <h1 class="heading trail-heading-target">
+          <small data-aos="fade-up">Hello, my name is Shaheer</small>
+          <h1 class="heading trail-heading-target" data-aos="fade-up">
             About ME <span>&</span> my work
           </h1>
           <div class="sub-heading">
-            <h2>Started as a hobby,</h2>
-            <h2>became my passion</h2>
+            <h2 data-aos="fade-left">Started as a hobby,</h2>
+            <h2 data-aos="fade-right">became my passion</h2>
           </div>
           <div class="flexed-container">
-            <div class="image-container">
+            <div class="image-container" data-aos="fade-right">
               <img
                 src="/assets/anime-pic-01.png"
                 alt="Anime Boy Siting on his Study Table"
@@ -113,16 +118,110 @@
                 alt=""
               />
             </div>
-            <p>
-              It all started when I was a 14 years old teenager, i started
-              coding & my first programming language was Python but I soon
-              realized that it's not the best choice if you are a beginner.
-            </p>
+            <div class="data-container" data-aos="fade-left">
+              <p class="large-paragraph" data-aos="fade-left">
+                It all started when I was a 14-year-old teenager. I got
+                interested in coding and started learning my first programming
+                language. It took me some time to understand it, but I knew that
+                consistency is the key.
+              </p>
+              <p data-aos="fade-left">Want to learn more about me?</p>
+              <div class="container" data-aos="fade-left">
+                <p data-aos="fade-left">Click the button</p>
+                <a href="/" data-aos="fade-left">More about me</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects-section" class="projects-section">
+          <h1 class="heading trail-heading-target" data-aos="fade-up">
+            Here are some of my <span>personal</span> website projects
+          </h1>
+          <div class="projects-container">
+            <div class="project" data-aos="fade-right">
+              <img
+                src="/assets/project-01.jpg"
+                alt=""
+                class="trail-image-target"
+                draggable="false"
+              />
+              <div class="project-details">
+                <p>Blitzy Bundles</p>
+                <div class="tags">
+                  <span>User Interface</span>
+                  <span>Website</span>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <img
+                src="/assets/project-02.jpg"
+                alt=""
+                class="trail-image-target"
+                draggable="false"
+              />
+              <div class="project-details">
+                <p>Comfy</p>
+                <div class="tags">
+                  <span>User Interface</span>
+                  <span>Website</span>
+                </div>
+              </div>
+            </div>
+            <div class="project" data-aos="fade-left">
+              <img
+                src="/assets/project-03.png"
+                alt=""
+                class="trail-image-target"
+                draggable="false"
+              />
+              <div class="project-details">
+                <p>MVA</p>
+                <div class="tags">
+                  <span>React Development</span>
+                  <span>Website</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="instagram-call">
+            <h2 data-aos="fade-up">Want to view more of my projects?</h2>
+            <div>
+              <p>Click the button</p>
+              <a href="/">Go to Instagram</a>
+            </div>
           </div>
         </section>
       </main>
+
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-    <script src="/js/mouse-trail.js"></script>
-    <script src="/js/header.js"></script>
+
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+      if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+      } else {
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        };
+      }
+
+      AOS.init({
+        offset: 100,
+        duration: 800,
+      });
+    </script>
   </body>
 </html>
