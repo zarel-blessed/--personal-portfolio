@@ -33,10 +33,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2em;
+    gap: 4em;
 
     .project {
-      width: min(100%, 400px);
+      width: min(100%, 500px);
 
       img {
         width: 100%;
@@ -44,7 +44,6 @@
         object-fit: cover;
         object-position: center 0%;
         border-radius: 1em;
-        border: 2px solid #777;
       }
 
       .project-details {

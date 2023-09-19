@@ -47,6 +47,8 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   background-color: var(--clr-pure-soul);
 
   &::-webkit-scrollbar {
@@ -54,6 +56,7 @@ body {
   }
 
   .page-container {
+    max-width: 1600px;
     background-color: var(--clr-pure-soul);
     overflow-x: hidden;
   }

@@ -1,0 +1,149 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  align-items: center;
+  margin-top: 6em;
+  padding: 1.35em 3.35em 3.35em;
+}
+.hero small {
+  font-size: var(--fs-normal);
+  color: var(--clr-dark-soul);
+}
+.hero .slogan {
+  width: 90%;
+  font-size: var(--fs-gigantic);
+  color: var(--clr-dark-soul);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+.hero figure picture {
+  position: relative;
+  top: 2em;
+}
+.hero figure picture img {
+  width: 100%;
+  aspect-ratio: 16/7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #999;
+  border-radius: 2em;
+}
+.hero figure picture::before {
+  content: "Explore How";
+  position: absolute;
+  left: 50%;
+  padding: 1em 2.5em;
+  background-color: var(--clr-primary);
+  border-radius: 1.35em;
+  font-size: var(--fs-x-small-large);
+  font-weight: 500;
+  translate: -50% -50%;
+  cursor: pointer;
+}
+.hero figure .recent-project-data {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2em;
+  padding-block: 1em;
+}
+.hero figure .recent-project-data .left figcaption {
+  font-size: var(--fs-x-small-large);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--clr-dark-soul);
+}
+.hero figure .recent-project-data .left .tags {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+.hero figure .recent-project-data .left .tags span {
+  display: inline-block;
+  position: relative;
+  bottom: 0px;
+  padding: 0.5em 1.45em;
+  font-family: "Michroma", sans-serif;
+  border: 1px solid var(--clr-dark-soul);
+  color: var(--clr-dark-soul);
+  border-radius: 0.725em;
+  font-family: "Inter", sans-serif;
+  border-color: #777;
+  color: #777;
+  border-radius: 0.5em;
+}
+.hero figure .recent-project-data .right a {
+  display: inline-block;
+  position: relative;
+  bottom: 0px;
+  padding: 0.5em 1.45em;
+  font-family: "Michroma", sans-serif;
+  border: 1px solid var(--clr-dark-soul);
+  color: var(--clr-dark-soul);
+  border-radius: 0.725em;
+  margin-top: 5px;
+  transition: bottom 0.2s linear;
+}
+.hero figure .recent-project-data .right a:hover {
+  bottom: 5px;
+}
+
+@media (max-width: 1400px) {
+  .hero .slogan {
+    font-size: var(--fs-medium-gigantic);
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    gap: 3em;
+  }
+  .hero .slogan {
+    font-size: var(--fs-small-gigantic);
+  }
+  .hero figure .recent-project-data {
+    flex-direction: column;
+  }
+  .hero figure .recent-project-data .right {
+    margin-top: 1em;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 4em;
+    padding-inline: 1.25em;
+  }
+  .hero .slogan {
+    font-size: var(--fs-x-small-gigantic);
+  }
+  .hero figure picture img {
+    aspect-ratio: 16/9;
+  }
+  .hero figure picture::before {
+    font-size: var(--fs-normal);
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    padding-inline: 1em;
+  }
+  .hero .slogan {
+    width: 100%;
+    font-size: var(--fs-xx-small-gigantic);
+  }
+  .hero figure picture {
+    top: 1em;
+  }
+  .hero figure picture img {
+    aspect-ratio: 1;
+  }
+  .hero figure picture::before {
+    padding: 0.65em 1.35em;
+    border-radius: 1em;
+  }
+  .hero figure .recent-project-data .right a {
+    font-size: var(--fs-medium-small);
+  }
+}/*# sourceMappingURL=hero.css.map */
