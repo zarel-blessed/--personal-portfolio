@@ -3,6 +3,7 @@ const header = document.querySelector(".header");
 
 const images = document.querySelectorAll(".trail-image-target");
 const headings = document.querySelectorAll(".trail-heading-target");
+const paragraphs = document.querySelectorAll(".trail-paragraph-target");
 
 window.addEventListener("mousemove", (e) => {
   mouseTrail.style.left = `${e.clientX}px`;
@@ -42,5 +43,19 @@ images.forEach((image) => {
     mouseTrail.style.border = `none`;
     mouseTrail.style.scale = `1`;
     mouseTrail.style.backgroundColor = `hsl(0, 0%, 1%)`;
+  });
+});
+
+paragraphs.forEach((paragraph) => {
+  paragraph.addEventListener("mousemove", () => {
+    mouseTrail.style.backgroundImage = `linear-gradient(orange, pink)`;
+    mouseTrail.style.mixBlendMode = `multiply`;
+    mouseTrail.style.scale = `3`;
+  });
+
+  paragraph.addEventListener("mouseout", () => {
+    mouseTrail.style.scale = `1`;
+    mouseTrail.style.mixBlendMode = `initial`;
+    mouseTrail.style.backgroundImage = `none`;
   });
 });

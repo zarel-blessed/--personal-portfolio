@@ -4,6 +4,7 @@
   width: 20px;
   height: 20px;
   background-color: var(--clr-dark-soul);
+  background-image: none;
   border-radius: 50%;
   transition: 0.3s linear;
   translate: -50% -50%;
