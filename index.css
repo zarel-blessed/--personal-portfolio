@@ -6,6 +6,7 @@
 @import url("/scss/about.css");
 @import url("/scss/projects.css");
 @import url("/scss/wcm.css");
+@import url("/scss/about-me.css");
 @import url("/scss/loader.css");
 
 :root {
@@ -60,6 +61,10 @@ body {
     max-width: 1600px;
     background-color: var(--clr-pure-soul);
     overflow-x: hidden;
+
+    section {
+      overflow: hidden;
+    }
   }
 }
 
